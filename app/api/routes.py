@@ -1,9 +1,11 @@
 from fastapi import APIRouter
 
+from app.api.endpoints import tasks
+
 router = APIRouter()
 
 # Include task endpoints with prefix
-# router.include_router(tasks.router, prefix="/tasks", tags=["tasks"])
+router.include_router(tasks.router, prefix="/tasks", tags=["tasks"])
 
 
 @router.get("/hello")
