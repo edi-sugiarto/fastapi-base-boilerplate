@@ -1,0 +1,18 @@
+[project]
+name = "fastapi-standard-boilerplate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "asyncpg>=0.30.0",
+    "colorama>=0.4.6",
+    "fastapi>=0.115.12",
+    "motor>=3.7.0",
+    "pydantic>=2.11.1",
+    "pydantic-settings>=2.8.1",
+    "pymongo>=4.11.3",
+    "sqlalchemy[asyncio]>=2.0.40",
+    "uvicorn>=0.34.0",
+]
