@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     # MongoDB settings (non-relational)
     MONGODB_URL: Optional[str] = "mongodb://localhost:27017"
     MONGODB_DATABASE_NAME: Optional[str] = "app_db"
+    
+    # MongoDB Docker settings
+    MONGO_INITDB_ROOT_USERNAME: Optional[str] = "admin"
+    MONGO_INITDB_ROOT_PASSWORD: Optional[str] = "password"
 
     class Config:
         env_file = ".env"
