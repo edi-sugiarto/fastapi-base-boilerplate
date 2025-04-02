@@ -1,0 +1,38 @@
+
+services:
+  app:
+    build: .
+    container_name: fastapi_boilerplate_base
+    restart: always
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    networks:
+      - dev-network
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    env_file:
+      - .env
+    volumes:
+      - ./data/mongodb_data:/data/db
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    external: true
+    name: dev-network
+
+volumes:
+  mongodb_data:
