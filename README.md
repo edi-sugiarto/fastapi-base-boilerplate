@@ -61,15 +61,15 @@ fastapi-base-boilerplate/
 
 2. Create a virtual environment:
    ```bash
-   python -m venv .venv
+   # Install uv if you don't have it
+   # pip install uv
+
+   uv venv .venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
 3. Install dependencies using uv:
    ```bash
-   # Install uv if you don't have it
-   # pip install uv
-   
    # Install dependencies from pyproject.toml
    uv pip install -e .
    ```

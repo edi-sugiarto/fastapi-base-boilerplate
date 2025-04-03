@@ -16,3 +16,15 @@ dependencies = [
     "sqlalchemy[asyncio]>=2.0.40",
     "uvicorn>=0.34.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app", "config"]
